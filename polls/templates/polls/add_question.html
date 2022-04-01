@@ -1,0 +1,12 @@
+<h1>Add question to database</h1>
+{% if submitted %}
+<p>Your Question was submitted</p>
+{% else %}
+<p>no form submitted</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="submit">
+</form>
+{% endif %}
